@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "description": "Локальний демонстраційний прототип Молодь.Діє",
-  "scripts": { "start": "node server.js", "dev": "node server.js" }
+  "homepage": "https://marcel322gg-png.github.io/Molod-Die",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node scripts/build-pages.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }

@@ -8,6 +8,8 @@
 
 У Windows запустіть файл `Запустить сайт.bat`: він відкриє вікно сервера на порту 3001 і браузер із сайтом.
 
+Для GitHub Pages використовується статична збірка `npm run build` у `dist/`. Workflow `.github/workflows/pages.yml` публікує її після кожного push у `main`. GitHub Pages не запускає `server.js`, тому серверні API, зокрема реєстрація та вхід, там недоступні.
+
 ```sh
 npm start
 ```
