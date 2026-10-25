@@ -15,6 +15,9 @@ for (const file of files) {
       .replaceAll('href="/', 'href="')
       .replaceAll('src="/', 'src="');
     fs.writeFileSync(path.join(output, file), html);
+  } else if (file === 'app.js') {
+    const app = fs.readFileSync(source, 'utf8').replaceAll('src="/logo.jpg"', 'src="logo.jpg"');
+    fs.writeFileSync(path.join(output, file), app);
   } else {
     fs.copyFileSync(source, path.join(output, file));
   }
